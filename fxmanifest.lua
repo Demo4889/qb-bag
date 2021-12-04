@@ -5,14 +5,14 @@ author 'Nathan#8860'
 description 'Its a bag?'
 version '1.0.0'
 
-lua54 'on'
-is_cfxv2 'yes'
-use_fxv2_oal 'true'
+shared_scripts {
+	'config.lua'
+}
 
-client_scripts {	
+client_scripts {
 	'client/main.lua',
 }
 
-server_scripts {	
+server_scripts {
 	'server/main.lua',
 }
