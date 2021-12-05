@@ -17,7 +17,6 @@ AddEventHandler('qb-bag:client:use:duffel-bag', function(BagId)
 		TaskPlayAnim(ped, "clothingtie", "try_tie_negative_a", 3.0, 3.0, 2000, 51, 0, false, false, false)
 		Wait (600)
 		ClearPedSecondaryTask(ped)
-		clothingitem = true
 		TriggerServerEvent("inventory:server:OpenInventory", "stash", 'bag_'..BagId, {maxweight = maxweight, slots = 10})
 		TriggerEvent("inventory:client:SetCurrentStash", 'bag_'..BagId)
 	end)
