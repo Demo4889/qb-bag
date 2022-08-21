@@ -4,8 +4,7 @@ local item = "duffel-bag"
 local clothingitem = false
 local maxweight = 18000
 
-RegisterNetEvent('qb-bag:client:use:duffel-bag')
-AddEventHandler('qb-bag:client:use:duffel-bag', function(BagId)
+RegisterNetEvent('qb-bag:client:use:duffel-bag', function(BagId)
 	local ped = PlayerPedId()
     QBCore.Functions.Progressbar("use_bag", "Opening Bag...", 2000, false, true, {
         disableMovement = false,
@@ -46,13 +45,13 @@ CreateThread(function()
 		if LocalPlayer.state.isLoggedIn then
 			local ped = PlayerPedId()
 
-			QBCore.Functions.TriggerCallback('QBCore:HasItem', function(result)
+			QBCore.Functions.HasItem(item, function(result)
 				if result then
 					SetPedComponentVariation(ped, 5, bagId, textureId, 2)
 				else
 					SetPedComponentVariation(ped, 5, 0, 0, 2)
 				end
-			end, item)
+			end)
 		end
 	end
 end)
