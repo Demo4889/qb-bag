@@ -6,7 +6,7 @@ local maxweight = 18000
 
 RegisterNetEvent('qb-bag:client:use:duffel-bag', function(BagId)
 	local ped = PlayerPedId()
-    QBCore.Functions.Progressbar("use_bag", "Opening Bag...", 2000, false, true, {
+    QBCore.Functions.Progressbar("use_bag", Config.Language.opening, 2000, false, true, {
         disableMovement = false,
         disableCarMovement = false,
 		disableMouse = false,
