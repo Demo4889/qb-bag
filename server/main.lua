@@ -23,13 +23,3 @@ RegisterServerEvent('qb-items:server:buy_duffelbag', function()
         TriggerClientEvent('QBCore:Notify', src, "You don't have enough cash.", "error", 3000)
     end
 end)
-
--- Alternatively add the following to your inventory/server/main.lua
---[[
-    if Player.Functions.RemoveMoney("cash", price, "itemshop-bought-item") then
-        if QBCore.Shared.SplitStr(itemData.name, "_")[1] == "weapon" then
-            itemData.info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
-        end
-        if itemData.name == 'duffel-bag' then itemData.info.bagid = math.random(11111,99999) end
-    .....
-]]
